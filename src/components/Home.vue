@@ -159,7 +159,6 @@
   @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;500;700&display=swap');
 
   .hero{
-  
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -167,7 +166,7 @@
     height: 640px;
   }
   .container{
-    width: 384px;
+    width: 32%;
     margin: 96px 96px;
   }
   .encabezado{
