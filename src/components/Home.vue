@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="hero" :style="{'background-image':'linear-gradient(rgba(245, 246, 252, 0.2), rgba(34, 235, 141, 0.75)), url(https://bit.ly/2YCMp7L)'}">
+    <div class="hero" :style="{'background-image':'linear-gradient(90deg, rgba(24,238,35,0.6) 0%, rgba(24,238,35,0.3) 56%, rgba(255,255,255,0.2)100%), url(https://bit.ly/2YCMp7L)'}">
       <div class="hero-header">
         <Navbar/>
       </div>
@@ -82,7 +82,7 @@
             <div class="column">
               <div class="field">
                 <div class="label">Por qué te gustaría ser parte del equipo de Neurofinanzas?</div>
-                <input type="message" name="message" class="input msg" placeholder="">
+                <input type="text" name="message" class="input msg" placeholder="">
               </div>
               <div class="enviar-button">
                 <button class="button has-text-weight-medium has-text-green is-pulled-right has-text-white enviar-button">Enviar</button>
