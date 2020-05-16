@@ -21,15 +21,21 @@
       <div class="navbar-menu" :class="{ 'is-active': showNav }">
         <div class="navbar-end">
             <ul class="navbar-item">
-                <li>
-                    <i class="is-size-5 has-text-white fab fa-facebook"></i>
-                </li>
-                <li>
-                    <i class="is-size-5 has-text-white fab fa-instagram"></i>
-                </li>
-                <li>
-                    <i class="is-size-5 has-text-white fab fa-twitter"></i>
-                </li>
+                <a href="https://www.facebook.com/neurofinanzasac/">
+                    <li>
+                        <i class="is-size-5 has-text-white fab fa-facebook"></i>
+                    </li>
+                </a>
+                <a href="https://www.instagram.com/neurofinanzasac/">
+                    <li>
+                        <i class="is-size-5 has-text-white fab fa-instagram"></i>
+                    </li>
+                </a>
+                <a href="https://twitter.com/Neurofinanzas1">
+                    <li>
+                        <i class="is-size-5 has-text-white fab fa-twitter"></i>
+                    </li>
+                </a>
             </ul>
         </div>
       </div>

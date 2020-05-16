@@ -21,15 +21,17 @@
             <p class="elementoTitle has-text-centered">{{ elemento.titulo }}</p>
             <p class="elementoDesc has-text-centered">{{ elemento.desc }}</p> 
             <div class="column buttonContainer">
-              <button class="button ver has-text-white is-uppercase is-rounded has-text-weight-medium">ver más</button>
+              <a :href="elemento.link">
+                <button class="button ver has-text-white is-uppercase is-rounded has-text-weight-medium">ver más</button>
+              </a>
             </div>
           </div>
         </div>
     </div>
     <div class="section is-small">
       <p class="sectionTitle is-size-2 has-text-centered">Alianzas</p>
-      <div class="columns is-multiline">
-        <div v-for="(alianza, index) in alianzas" :key="index" class="column is-one-third is-vcentered alianza">
+      <div class="alianzas">
+        <div v-for="(alianza, index) in alianzas" :key="index" class="alianza">
           <img class='imageAlianza' :src="alianza.image"/>
           <p class="has-text-centered is-size-5 alianzaTitle">{{ alianza.titulo }}</p>    
         </div>
@@ -120,9 +122,24 @@
         proposito: 'Construir prosperidad social de persona en persona, de familia en familia.',
         descripcion: 'Somos una Asociación Civil cuya oferta promueve un modelo disruptivo de Educación Financiera.',
         elementos: [
-          { titulo: 'Foro de Neurofinanzas', desc: 'Cada tercer miércoles de mes, charlamos sobre finanzas en un espacio incluyente y libre de ventas. ¡Toda la familia es bienvenida!', image: require('@/assets/foro.svg')},
-          { titulo: 'Educación Financiera para empresas', desc: 'Tenemos una metodología con programas registrados ante la STPS para que el dinero deje de ser un factor de estrés para el personal de tu empresa.', image: require('@/assets/educacion.svg')},
-          { titulo: 'Taller "Dinero a tu favor"', desc: 'Taller de 8 sesiones, para cambiar la forma en que te relacionas con el dinero y tomar mejores desiciones financieras para una vida próspera.', image: require('@/assets/taller.svg')}
+          { 
+            titulo: 'Foro de Neurofinanzas', 
+            desc: 'Cada tercer miércoles de mes, charlamos sobre finanzas en un espacio incluyente y libre de ventas. ¡Toda la familia es bienvenida!', 
+            image: require('@/assets/foro.svg'),
+            link: 'https://www.ticketopolis.com/foroneurofinanzas/index.html'
+          },
+          { 
+            titulo: 'Educación Financiera para empresas', 
+            desc: 'Tenemos una metodología con programas registrados ante la STPS para que el dinero deje de ser un factor de estrés para el personal de tu empresa.', 
+            image: require('@/assets/educacion.svg'),
+            link: ''
+          },
+          { 
+            titulo: 'Taller "Dinero a tu favor"', 
+            desc: 'Taller de 8 sesiones, para cambiar la forma en que te relacionas con el dinero y tomar mejores desiciones financieras para una vida próspera.', 
+            image: require('@/assets/taller.svg'),
+            link: 'https://www.ticketopolis.com/dineroatufavor/index.html'
+          }
         ],
         alianzas:[
           {titulo: 'Tec de Monterrey', image: require('@/assets/tec.png')},
@@ -165,6 +182,7 @@
     background-repeat: no-repeat;
     height: 640px;
   }
+  
   .container{
     width: 32%;
     margin: 96px 96px;
@@ -233,6 +251,12 @@
     display: flex;
     justify-content: center;
     align-content: flex-end;
+  }
+  .alianzas{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 2fr));
+    gap: 0;
+    padding: 0 48px;
   }
   .alianza{
     display: flex;
