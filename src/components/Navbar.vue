@@ -23,17 +23,17 @@
             <ul class="navbar-item">
                 <a href="https://www.facebook.com/neurofinanzasac/">
                     <li>
-                        <i class="is-size-5 has-text-white fab fa-facebook"></i>
+                        <i class="is-size-5 fab fa-facebook"></i>
                     </li>
                 </a>
                 <a href="https://www.instagram.com/neurofinanzasac/">
                     <li>
-                        <i class="is-size-5 has-text-white fab fa-instagram"></i>
+                        <i class="is-size-5 fab fa-instagram"></i>
                     </li>
                 </a>
                 <a href="https://twitter.com/Neurofinanzas1">
                     <li>
-                        <i class="is-size-5 has-text-white fab fa-twitter"></i>
+                        <i class="is-size-5 fab fa-twitter"></i>
                     </li>
                 </a>
             </ul>
@@ -54,10 +54,27 @@
 </script>
 
 <style scoped>
-    nav {
-        padding: 16px 96px;
-    }
-    li {
-        padding: 10px;
-    }
+nav {
+    padding-top: 16px;
+    width: 90%;
+    margin: 0 auto;
+}
+li {
+    padding: 10px;
+}
+/* mobile */
+@media screen and (max-width: 769px) {
+  nav {
+    width: 100%;
+    position: relative;
+  }
+  .navbar-menu{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+  }
+  li {
+      color: #000000;
+  }
+}
 </style>

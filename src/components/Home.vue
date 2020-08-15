@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="hero" :style="{'background-image':'linear-gradient(90deg, rgba(24,238,35,0.6) 0%, rgba(24,238,35,0.3) 56%, rgba(255,255,255,0.2)100%), url(https://bit.ly/2YCMp7L)'}">
+    <div class="hero" :style="{'background-image':'linear-gradient(283.3deg, rgba(63, 228, 80, 0.21) 20.27%, rgba(40, 225, 159, 0.65) 75.51%), url(https://scontent.fntr6-2.fna.fbcdn.net/v/t1.0-9/39273629_2272900866273636_399110922607525888_o.jpg?_nc_cat=111&_nc_sid=cdbe9c&_nc_eui2=AeGF9jMtBXmBw7FucsWgriklzgJT6L-TsFbOAlPov5OwVonDou6Km7C6QBmjdoEhOZapDUMbaU2UMomlsxAyD1O_&_nc_ohc=I4jqPmPHRn8AX9gCDQE&_nc_ht=scontent.fntr6-2.fna&oh=b24753bd43d8d21c0e93d7e3ddb6f82a&oe=5F5B38F7)'}">
       <div class="hero-header">
         <Navbar/>
       </div>
@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="box">
-      <div class="boxTitle is-size-2 has-text-weight-bold has-text-centered is-uppercase">{{ boxTitle }}</div>
+      <div class="boxTitle is-size-3 has-text-weight-bold has-text-centered is-uppercase">{{ boxTitle }}</div>
       <div class="proposito is-size-4 has-text-weight-bold has-text-centered">{{ proposito }}</div>
       <div class="descripcion is-size-5 has-text-centered">{{ descripcion }}</div>
         <div class="columns">
@@ -28,8 +28,8 @@
           </div>
         </div>
     </div>
-    <div class="section is-small">
-      <p class="sectionTitle is-size-2 has-text-centered">Alianzas</p>
+    <div class="section alianzas-container is-small">
+      <p class="sectionTitle is-size-3 has-text-centered">Alianzas</p>
       <div class="alianzas">
         <div v-for="(alianza, index) in alianzas" :key="index" class="alianza">
           <img class='imageAlianza' :src="alianza.image"/>
@@ -39,7 +39,7 @@
     </div>
     <div class="section is-small greySection">
       <div class='teamContainer'>
-        <p class="has-text-centered sectionTitle is-size-2">Conoce al equipo</p>
+        <p class="has-text-centered sectionTitle is-size-3">Conoce al equipo</p>
         <div class="columns is-multiline">
           <div v-for="(miembro, index) in miembros" class="column is-one-fifth alianza" :key="index">
             <img class="imageMiembro" :src="miembro.image"/>
@@ -50,10 +50,9 @@
       </div>
     </div>
     <div class="section is-small greySection">
-      <p class="has-text-centered sectionTitle is-size-2">¡Únete al equipo de Neurofinanzas!</p>
+      <p class="has-text-centered sectionTitle is-size-3">¡Únete al equipo de Neurofinanzas!</p>
       <p class="has-text-centered descripcion is-size-5">{{ form }}</p>
       <form @submit.prevent="send">
-        <div class="forms">
           <div class="columns">
             <div class="column">
               <div class="field">
@@ -91,7 +90,6 @@
               </div>
             </div>  
           </div>  
-        </div> 
       </form>
     </div>
   </div>
@@ -182,7 +180,10 @@
     background-repeat: no-repeat;
     height: 640px;
   }
-  
+  .alianzas-container{
+    padding-right: 0;
+    padding-left: 0;
+  }
   .container{
     width: 32%;
     margin: 96px 96px;
@@ -222,10 +223,9 @@
     color: rgb(141, 140, 140);
   }
   .descripcion{
-    width: 70%;
-    margin: 0 auto 24px;
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(141, 140, 140);
+    margin-bottom: 24px;
   }
   .image{
     margin: 0 auto;
@@ -300,5 +300,30 @@
   .label{
     color:rgb(114, 112, 112);
   }
+  .form{
+    align-items: left;
+  }
 
+/* mobile */
+@media screen and (max-width: 769px) {
+  .hero{
+    height: 480px;
+  }
+  .container{
+    margin: 24px 24px;
+  }
+  .alianzas{
+    padding: 0;
+  }
+  .proposito{
+    width: 90%;
+  }
+  .column{
+    width: 100%;
+  }
+  .enviar-button{
+    margin: 12px 0 48px;
+    width: 100%;
+  }
+}
 </style>
