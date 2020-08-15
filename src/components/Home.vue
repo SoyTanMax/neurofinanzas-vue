@@ -83,7 +83,7 @@
             <div class="column">
               <div class="field">
                 <div class="label">Por qué te gustaría ser parte del equipo de Neurofinanzas?</div>
-                <input type="text" name="message" class="input msg" placeholder="">
+                <textarea type="text" name="message" class="textarea msg" placeholder=""></textarea>
               </div>
               <div class="enviar-button">
                 <button class="button has-text-weight-medium has-text-green is-pulled-right has-text-white enviar-button">Enviar</button>
@@ -273,6 +273,8 @@
   }
   .greySection{
     background-color: #f9f9f9;
+    padding-left: 96px;
+    padding-right: 96px;
   }
   .imageMiembro{
     max-width: 96px;
@@ -324,6 +326,10 @@
   .enviar-button{
     margin: 12px 0 48px;
     width: 100%;
+  }
+  .greySection{
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }
 </style>
