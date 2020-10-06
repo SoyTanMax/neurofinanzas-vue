@@ -41,7 +41,7 @@
       <div class='teamContainer'>
         <p class="has-text-centered sectionTitle is-size-3">Conoce al equipo</p>
         <div class="columns is-multiline">
-          <div v-for="(miembro, index) in miembros" class="column is-one-fifth alianza" :key="index">
+          <div v-for="(miembro, index) in miembros" class="column is-one-quarter alianza" :key="index">
             <img class="imageMiembro" :src="miembro.image"/>
             <p class="is-size-5 has-text-centered">{{ miembro.nombre }}</p>
             <p class="is-size-6 has-text-centered">{{ miembro.puesto }}</p>
@@ -117,7 +117,7 @@
       return {
         title: 'Empieza a cambiar tu historia con Neurofinanzas',
         boxTitle: 'Nuestro propósito',
-        proposito: 'Construir prosperidad social de persona en persona, de familia en familia.',
+        proposito: 'Construir prosperidad económica y social, de persona en persona y de familia en familia, a través del empoderamiento con Educación Financiera básica.',
         descripcion: 'Somos una Asociación Civil cuya oferta promueve un modelo disruptivo de Educación Financiera.',
         elementos: [
           { 
@@ -148,19 +148,27 @@
           {titulo: 'UDEM', image: require('@/assets/udem.png')},
           {titulo: 'Marketplace Literacy Project', image: require('@/assets/mlp.png')},
           {titulo: 'Ticketopolis', image: require('@/assets/ticket.svg')},
-          {titulo: 'Fotophy', image: require('@/assets/fotophy.svg')}
+          {titulo: 'Fotophy', image: require('@/assets/fotophy.svg')},
+          {titulo: 'ITSTA', image: require('@/assets/ITSTA.png')},
+          {titulo: 'ANDAMOS', image: require('@/assets/andamos.png')},
+          {titulo: 'Biblioteca Benjamin Franklin', image: require('@/assets/bibliotecaBF.png')},
+          {titulo: 'Catalizadora', image: require('@/assets/catalizadora.jpg')},
+          {titulo: 'Mundo Generacional', image: require('@/assets/mundoGeneracional.jpeg')},
+          {titulo: 'Mundo Generacional', image: require('@/assets/loyola.png')}
         ],
         miembros:[
           {nombre: 'Cristina', puesto: 'Fundadora', image: require('@/assets/cristina.png')},
-          {nombre: 'Alejandra', puesto: 'Logística', image: require('@/assets/alejandra.png')},
-          {nombre: 'Yolanda', puesto: 'Talento Creativo', image: require('@/assets/yolanda.png')},
-          {nombre: 'Fernando', puesto: 'Logística', image: require('@/assets/fernando.png')},
-          {nombre: 'Blanca', puesto: 'Logística', image: require('@/assets/blanca.png')},
-          {nombre: 'Angela', puesto: 'Talento Creativo', image: require('@/assets/angela.png')},
-          {nombre: 'Ricardo', puesto: 'Organizador', image: require('@/assets/ricardo.png')},
-          {nombre: 'Concepción', puesto: 'Servicio Social', image: require('@/assets/concepcion.png')},
-          {nombre: 'Priscilia', puesto: 'Logística', image: require('@/assets/priscilia.png')},
-          {nombre: 'Lydia', puesto: 'Sistematización', image: require('@/assets/lydia.png')}
+          {nombre: 'Alejandra', puesto: 'Administración Financiera', image: require('@/assets/alejandra.png')},
+          {nombre: 'Yolanda', puesto: 'Comunicación y Diseño', image: require('@/assets/yolanda.png')},
+          {nombre: 'Fernando', puesto: 'Tecnologías de Información', image: require('@/assets/fernando.png')},
+          {nombre: 'Blanca', puesto: 'Tecnologías de Información', image: require('@/assets/blanca.png')},
+          {nombre: 'Angela', puesto: 'Comunicación y Diseño', image: require('@/assets/angela.png')},
+          {nombre: 'Ricardo', puesto: 'Coordinación Académica', image: require('@/assets/ricardo.png')},
+          {nombre: 'Concepción', puesto: 'Inversión Social', image: require('@/assets/concepcion.png')},
+          {nombre: 'Priscilia', puesto: 'Coordinación Académica', image: require('@/assets/priscilia.png')},
+          {nombre: 'Lydia', puesto: 'Inversión Social', image: require('@/assets/lydia.png')},
+          {nombre: 'Gaby', puesto: 'Administración Financiera', image: require('@/assets/gaby.png')},
+          {nombre: 'Rodolfo', puesto: 'Logística', image: require('@/assets/rodolfo.png')}
         ],
         form:'Ayuda a más personas a educarse para lograr la autonomía financiera y aprende mucho en la marcha. ¡Genera relaciones a largo plazo, y construye patrimonio propio! ¡JUNTOS ES POSIBLE!'
       }
@@ -278,6 +286,7 @@
   }
   .imageMiembro{
     max-width: 96px;
+    border-radius: 50%;
   }
   .sectionTitle{
     color: #35A849;
