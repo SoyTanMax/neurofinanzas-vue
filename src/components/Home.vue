@@ -154,7 +154,7 @@
           {titulo: 'Biblioteca Benjamin Franklin', image: require('@/assets/bibliotecaBF.png')},
           {titulo: 'Catalizadora', image: require('@/assets/catalizadora.jpg')},
           {titulo: 'Mundo Generacional', image: require('@/assets/mundoGeneracional.jpeg')},
-          {titulo: 'Mundo Generacional', image: require('@/assets/loyola.png')}
+          {titulo: 'Loyola Marymount', image: require('@/assets/loyola.png')}
         ],
         miembros:[
           {nombre: 'Cristina', puesto: 'Fundadora', image: require('@/assets/cristina.png')},
