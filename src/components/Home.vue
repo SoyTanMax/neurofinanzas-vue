@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="hero" :style="{'background-image':'linear-gradient(283.3deg, rgba(63, 228, 80, 0.21) 20.27%, rgba(40, 225, 159, 0.65) 75.51%), url(https://scontent.fntr6-2.fna.fbcdn.net/v/t1.0-9/39273629_2272900866273636_399110922607525888_o.jpg?_nc_cat=111&_nc_sid=cdbe9c&_nc_eui2=AeGF9jMtBXmBw7FucsWgriklzgJT6L-TsFbOAlPov5OwVonDou6Km7C6QBmjdoEhOZapDUMbaU2UMomlsxAyD1O_&_nc_ohc=I4jqPmPHRn8AX9gCDQE&_nc_ht=scontent.fntr6-2.fna&oh=b24753bd43d8d21c0e93d7e3ddb6f82a&oe=5F5B38F7)'}">
+    <div class="hero" :style="{'background-image':'linear-gradient(283.3deg, rgba(63, 228, 80, 0.21) 20.27%, rgba(40, 225, 159, 0.65) 75.51%), url('+ header +')'}">
       <div class="hero-header">
         <Navbar/>
       </div>
@@ -115,6 +115,7 @@
     },
     data () {
       return {
+        header: require('@/assets/fondoHero.jpg'),
         title: 'Empieza a cambiar tu historia con Neurofinanzas',
         boxTitle: 'Nuestro propósito',
         proposito: 'Construir prosperidad económica y social, de persona en persona y de familia en familia, a través del empoderamiento con Educación Financiera básica.',
